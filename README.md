@@ -10,7 +10,7 @@ Example!
 --------
 
     $ composer install
-    php -S localhost:80000
+    php -S localhost:8000
 
     Navigate to http://localhost:8000?ip=12.12.12.12
 
