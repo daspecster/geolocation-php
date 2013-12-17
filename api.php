@@ -12,13 +12,13 @@ header('Content-type: application/json');
 header("Access-Control-Allow-Origin: *");
 
 try {
-	$reader = new Reader('./GeoLite2-City.mmdb');
+  $reader = new Reader('./GeoLite2-City.mmdb');
 
-	$options = array(
-		'options' => array(
-			'regexp' => '/(?:\d{1,3}\.){3}\d{1,3}/'
-			)
-		);
+  $options = array(
+    'options' => array(
+      'regexp' => '/(?:\d{1,3}\.){3}\d{1,3}/'
+      )
+    );
   $ip = filter_var($_GET['ip'], FILTER_VALIDATE_REGEXP, $options);
 
 
@@ -30,7 +30,7 @@ try {
 
   } else {
 
-  	echo '{"message": "Bad IPv4 address given"}';
+    echo '{"message": "Bad IPv4 address given"}';
   }
 }
 catch (Exception $e) {
